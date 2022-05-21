@@ -17,7 +17,7 @@ fetch('https://jsonplaceholder.typicode.com/posts?_limit=15&_start=7')
            .then(res => res.json())
            .then(user => {   
                postItem.innerHTML = `<h2>${title}</h2>
-                                    <span><strong>Post created by:</strong> ${user.name}</span>
+                                    <span><strong>Post created by:</strong> <a href="./user.html?user_id=${userId}"> ${user.name}</span>
                                      <p>${body}</p>`;   
             })
            })
